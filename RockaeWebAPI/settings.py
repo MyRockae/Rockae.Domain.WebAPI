@@ -21,7 +21,7 @@ DATABASES = {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600, ssl_require=True)
 }
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 INSTALLED_APPS = [
