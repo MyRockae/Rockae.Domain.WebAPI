@@ -22,6 +22,9 @@ COPY --from=builder /usr/local/bin/gunicorn /usr/local/bin/gunicorn
 # Copy application code
 COPY . /app/
 
+# Delete the folder causing the error (adjust the path if needed)
+RUN rm -rf /app/AstronautWebAPI
+
 # Set environment variables
 ENV PORT=8000
 EXPOSE $PORT
